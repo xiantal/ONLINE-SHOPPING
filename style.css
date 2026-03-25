@@ -1,0 +1,281 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #0e1116;
+  color: #e4e6eb;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  background: #11151c;
+  padding: 20px 0;
+  border-bottom: 1px solid #1f2933;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #00e676;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #cfd8dc;
+  transition: 0.3s;
+}
+
+nav ul li a.active {
+  color: #00e676;
+  font-weight: bold;
+  border-bottom: 2px solid #00e676;
+  padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+  color: #00e676;
+}
+
+.scroll-down {
+  position: relative;
+  text-align: center;
+  margin: -120px 0 40px 0;
+  transform: rotate(90deg);
+}
+
+.scroll-down span {
+  display: block;
+  font-size: 200px;
+  color: #00e676;
+  animation: scrollDown 2s infinite;
+  line-height: 1;
+}
+
+@keyframes scrollDown {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(15px);
+    opacity: 0.6;
+  }
+}
+
+.section {
+  padding: 70px 0;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #00e676;
+  clear: both;
+}
+
+/* BACK BUTTON */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #161b22;
+  color: #00e676;
+  text-decoration: none;
+  border: 1px solid #00e676;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  transition: 0.3s;
+  font-weight: bold;
+  float: left;
+  clear: both;
+}
+
+.back-button:hover {
+  background: #00e676;
+  color: #000;
+  transform: translateX(-5px);
+  box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  width: 300px;
+  background: #161b22;
+  border-radius: 10px;
+  border: 1px solid #1f2933;
+  overflow: hidden;
+  transition: 0.3s;
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 20px 0 10px;
+  color: #00e676;
+}
+
+.card p {
+  padding: 0 20px 20px;
+  font-size: 14px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #00e676;
+  background: #1a1f26;
+  box-shadow: 0 8px 16px rgba(0, 230, 118, 0.2);
+}
+
+.big-card {
+  width: 450px;
+  background: #161b22;
+  border-radius: 15px;
+  border: 1px solid #1f2933;
+  overflow: hidden;
+  transition: 0.3s;
+  padding: 0;
+}
+
+.big-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.big-card h3 {
+  margin: 25px 20px 15px;
+  color: #00e676;
+  font-size: 24px;
+}
+
+.big-card p {
+  padding: 0 20px 25px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.big-card:hover {
+  transform: translateY(-6px);
+  border-color: #00e676;
+  background: #1a1f26;
+  box-shadow: 0 8px 16px rgba(0, 230, 118, 0.2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  background: #161b22;
+  border: 1px solid #1f2933;
+  border-radius: 8px;
+  color: #e4e6eb;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00e676;
+  box-shadow: 0 0 8px rgba(0, 230, 118, 0.3);
+}
+
+.contact-form button {
+  padding: 12px 30px;
+  background: #00e676;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background: #00c563;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 230, 118, 0.3);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #11151c;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #1f2933;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 80px;
+}
